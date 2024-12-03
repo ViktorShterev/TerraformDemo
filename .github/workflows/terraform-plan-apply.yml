@@ -35,15 +35,15 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
 
-    # Step 4: Initialize Terraform
+    # Initialize Terraform
     - name: Initialize Terraform
       run: terraform init
 
-    # Step 5: Run Terraform Plan and Save Output
+    # Run Terraform Plan and Save Output
     - name: Terraform Plan and Save Output
       run: terraform plan -var-file="values.tfvars" -out=terraform.plan
 
-    # Step 6: Upload the plan file as an artifact
+    # Upload the plan file as an artifact
     - name: Upload Terraform Plan Artifact
       uses: actions/upload-artifact@v3
       with:

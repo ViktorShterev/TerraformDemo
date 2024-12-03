@@ -1,4 +1,4 @@
-name: 'Terraform Test'
+name: 'Terraform Plan and Apply'
 
 on:
   push:
@@ -29,6 +29,7 @@ jobs:
     - name: Azure login
       uses: azure/login@v2
       with:
+        auth-type: IDENTITY
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}

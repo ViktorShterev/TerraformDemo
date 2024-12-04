@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name = "StorageRG"
+    resource_group_name  = "StorageRG"
     storage_account_name = "taskboardstoragevik"
-    container_name = "taskboardcontainervik"
-    key = "terraform.tfstate"
+    container_name       = "taskboardcontainervik"
+    key                  = "terraform.tfstate"
   }
 }
 

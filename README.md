@@ -1,1 +1,1 @@
-Terraform Demo DevOps
+Terraform Demo
